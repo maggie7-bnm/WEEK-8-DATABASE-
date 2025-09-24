@@ -205,10 +205,6 @@ CREATE TABLE product_reviews (
     ON DELETE SET NULL ON UPDATE CASCADE
 ) ENGINE=InnoDB;
 
--- ----------------------------------------------------
--- Table: coupons
--- Example of discount/coupon table
--- ----------------------------------------------------
 DROP TABLE IF EXISTS coupons;
 CREATE TABLE coupons (
   coupon_id INT AUTO_INCREMENT PRIMARY KEY,
@@ -220,9 +216,7 @@ CREATE TABLE coupons (
   active BOOLEAN DEFAULT TRUE
 ) ENGINE=InnoDB;
 
--- ----------------------------------------------------
--- Table: order_coupons (many-to-many if multiple coupons per order allowed)
--- ----------------------------------------------------
+
 DROP TABLE IF EXISTS order_coupons;
 CREATE TABLE order_coupons (
   order_id INT NOT NULL,
